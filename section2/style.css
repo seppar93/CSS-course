@@ -1,0 +1,51 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#product-overview  {
+    background: #ff1b68;
+}
+
+h1 {
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+} 
+/* css reads from top to bottom so the second h1 is shown */
+/* multiple rules  */
+/* inline styles have the highest priority  */
+/* multiple rules applied means cascading  */
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+}
+.section-title {
+    color:#2ddefc;
+    font: inherit; /* < take the styling of the parent  */
+}
+
+/* inheritance : element inherence from the parent element  */
+/* inheritance have the lowest specficity  */
+
+#product-overview h1 { /* <= this is considered a combinator  */
+    /* ^^ any h1 inside of section tag with the id #product-overview  */
+    /* the more rules the higher the  specificity */
+    font-size: 30px;
+}
+
+/* Combinators  */
+
+/* adjacent sibling i.e direct sibling */
+div + p {
+/* directly below it */
+}
+/* general sibling */
+div ~ p {
+/* all siblings that are the same level */
+}
+/* child sibling */
+div > p {
+/* direct child */
+}
+
+/* decendent */
+div p {
+    /* level dosnt matter */
+}
