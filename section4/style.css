@@ -1,0 +1,27 @@
+.main-section {
+    height: 800px;
+    border: 1px solid #ccc;
+    padding: 16px;
+}
+/* apply to an achor tag with the class active */
+a.active {
+
+}
+.highlighted {
+
+}
+/* when should you apply which selector? */
+/* classes should be your first choice for styling */
+/* mostly used for linking to id and JSS */
+/* the id link page is not related to styling in css */
+
+/* order of css matters as we go down the file the last value is considered */
+/* !important takes precedents over everything */
+
+/* exclude selector */
+/* :not(selector) */
+/* exclude any acnhor tags that dont have the active class */
+
+a:not(.active){
+    color: blue;
+}
