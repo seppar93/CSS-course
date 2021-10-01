@@ -1,21 +1,39 @@
+/** @format */
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   /* the body has its on margin  */
 }
 #product-overview {
   background: #ff1b68;
-  padding: 20px; 
+  padding: 20px;
   /* PX is a unit to define the value */
   /* padding is adding values around the text */
   /* the content of the element the padding is added after the margin */
-  border: 5px black solid; /* <= this is a short hand of declaring border-style border color border width  */
-  margin:20px; /*  margin collapsing */
+  /* border: 5px black solid; <= this is a short hand of declaring border-style border color border width  */
+  /* margin: 20px;  <= margin collapsing */
+
+  width: 50%; /* <= take up values with percentages or px   */
+  height: 100%; /* you get the height from what the parent element gives you would need to change the height of the parent */
+  /* you need to pass the height down */
 }
+/* Block level elements take up the full available elements
+ */
+
 /*  margin collapsing 
 if you have two elements that are block elements 
-margings btween them are collapsed together whichver is bigger
+margin's between them are collapsed together whichever is bigger
+in general use "margin-top" or "margin-bottom"
 */
 
+/* Shot hand properties 
+combine values of multiple properties in a single property
+the order does not matter for most short hands
+when you apply only 1 value it will apply to all
+EXAMPLE you can give background: blue or do background-color: blue
+*/
 h1 {
   color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -31,3 +49,71 @@ h1 {
 #product-overview h1 {
   font-size: 30px;
 }
+
+/* when we set the height and width what value are we really changing  */
+/* when setting the width and adding the padding */
+.content {
+  width: 100%;
+  padding: 20px;
+  border: 5px solid black;
+  /* the padding is not part of the calculation of width 
+    however this added and calculated in  */
+  /* this can be fixed by the box sizing  */
+
+  /* box-sizing: border-box; */
+
+  /* content box we set the width of height of content without padding and border */
+  /* border-box to include the padding and margin */
+  /* ^ this sets the value of the element */
+  /* often added to the * as border box so it is not inherated so all values have their own */
+  /* we want to content padding and boarder with our width and height calcualtion */
+}
+
+.main-header {
+  /* backgroudnd color 
+    padding
+    set the width to full width */
+  background: #2ddf5c;
+  padding: 8px 16px;
+  /* display property allows us to change from block to inline or block-inline */
+  /* in html we have inline lements and block elements 
+  a tags are inline elements they are rendered in line
+  they dont take the full element
+  list item <li> is block takes up the whole space
+  both use box model 
+  but you cant set the margin for them since they are inline with elements
+  we can cahnge that to display
+   */
+}
+
+.main-nav__item {
+  display: inline-block;
+  /* ^^ these elements can go next to each other but like block elements you can set the top and bottmom margin and padding  */
+  /* they take up as much as they need but you can still set them like block element */
+
+  /* Display: none removes the element completly from the DOM however display: hiden keeps its postion on the dom tree */
+}
+/* how would you put the div in the header on the same line as the nav?  */
+
+/* both t */
+.main-nav {
+  display: inline-block;
+  /* given that the parent element are inline-block text-align does nothing
+  we need to set the width */
+  text-align: right;
+  /* we are removing the right from the div in our nav  */
+  width: calc(100% - 54px);
+}
+.main-header > div {
+  display: inline-block;
+}
+.link-title {
+}
+.main-nav__items {
+    /* we removed all the inherited margin and padding  */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* EMPTY WHITE SPACE IS ADDED to the elements be aware of that  */
