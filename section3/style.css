@@ -102,18 +102,74 @@ h1 {
   we need to set the width */
   text-align: right;
   /* we are removing the right from the div in our nav  */
-  width: calc(100% - 54px);
+  width: calc(100% - 80px);
+  vertical-align: middle;
 }
 .main-header > div {
   display: inline-block;
+  /* vertical align needs to be set on both alignments to align */
+  vertical-align: middle;
 }
 .link-title {
 }
 .main-nav__items {
-    /* we removed all the inherited margin and padding  */
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  /* we removed all the inherited margin and padding  */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* EMPTY WHITE SPACE IS ADDED to the elements be aware of that  */
+
+.main-header__brand {
+  color: #0e4f0e;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 22px;
+}
+/* descendant selector matches all elements  */
+.main-nav__items a {
+  color: #0e4f0e;
+  text-decoration: none;
+  margin-right: 16px;
+  font-weight: bold;
+  padding: 3px 0;
 }
 
-/* EMPTY WHITE SPACE IS ADDED to the elements be aware of that  */
+/* Pseudo classes & pseudo elements  */
+
+/*  pseudo classes allow us to define a style for a spical state of element
+like hover and element
+:class name 
+STATE VS PART
+ */
+/* Pseudo element  allow us to define a style of a specifc part of an element
+ :: element name
+ 
+ */
+
+ /* you should group rules rather then writing them */
+/* they are not the same just share the same declaration */
+.main-nav__item a:hover,.main-nav__item a:active {
+  color: white;
+  border-bottom: solid white;
+
+}
+
+
+.main-nav__item a::after {
+  /* content: "(link)"; content aplies to certian psudo elements */
+}
+/* here the order is important */
+.main-nav__item--cta a {
+
+    color: white;
+    background: #ff1b68;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+.main-nav__item--cta a:hover,
+.main-nav__item--cta a:active{
+    color: white;
+    background: #ff1b68;
+    border: none; 
+}
