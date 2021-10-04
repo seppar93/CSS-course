@@ -28,7 +28,7 @@ margin's between them are collapsed together whichever is bigger
 in general use "margin-top" or "margin-bottom"
 */
 
-/* Shot hand properties 
+/* Short hand properties 
 combine values of multiple properties in a single property
 the order does not matter for most short hands
 when you apply only 1 value it will apply to all
@@ -76,13 +76,14 @@ h1 {
   background: #2ddf5c;
   padding: 8px 16px;
   /* display property allows us to change from block to inline or block-inline */
-  /* in html we have inline lements and block elements 
+
+  /* in html we have inline elements and block elements 
   a tags are inline elements they are rendered in line
   they dont take the full element
   list item <li> is block takes up the whole space
   both use box model 
   but you cant set the margin for them since they are inline with elements
-  we can cahnge that to display
+  we can change that to display
    */
 }
 
@@ -91,7 +92,7 @@ h1 {
   /* ^^ these elements can go next to each other but like block elements you can set the top and bottmom margin and padding  */
   /* they take up as much as they need but you can still set them like block element */
 
-  /* Display: none removes the element completly from the DOM however display: hiden keeps its postion on the dom tree */
+  /* Display: none removes the element completly from the DOM however visibility: hidden; keeps its position on the dom tree */
 }
 /* how would you put the div in the header on the same line as the nav?  */
 
@@ -137,12 +138,12 @@ h1 {
 
 /* Pseudo classes & pseudo elements  */
 
-/*  pseudo classes allow us to define a style for a spical state of element
+/*  pseudo classes allow us to define a style for a special state of element
 like hover and element
 :class name 
 STATE VS PART
  */
-/* Pseudo element  allow us to define a style of a specifc part of an element
+/* Pseudo element  allow us to define a style of a specific part of an element
  :: element name
  
  */
