@@ -12,7 +12,7 @@
  */
 
  /* MY ATTEMPT */
-body > div:first-child {
+/* body > div:first-child {
     margin: 20px;
     border: 1px solid black;
     text-align: center;
@@ -28,4 +28,26 @@ div + div {
     margin: 20px;
 
     background-color: red;
+} */
+
+
+.box {
+    padding: 10px;
+    border: solid 3px red;
+    margin: 0;
+    height: 300px;
+    width: 50%;
+    box-sizing: border-box;
+    display: inline-block;
+}
+/* height and width dont refre tothe viewport but to the container the surrounding elements  */
+body, html {
+    height: 100%;
+}
+/* if you dont set the box-sizing the margins and padding are added */
+#first-box {
+    display: none;
+}
+div:last-of-type:hover{
+    background-color: aqua;
 }
