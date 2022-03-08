@@ -15,3 +15,7 @@ outline applies to outside of the border between margin and border you can styli
 remember that `inline-block` will add whitespace
 
 `margin: 0 auto;` filles the available space on the left and right equally 
+
+`floats`floating elements help position some elements differently 
+you are over riding the default position
+you are taking the element out of the flow 
