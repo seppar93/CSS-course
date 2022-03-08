@@ -1,0 +1,41 @@
+.main-footer {
+    background-color: black;
+    padding: 32px;
+    margin-top: 48px;
+}
+.main-footer__links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.main-footer__link {
+    display: inline-block;
+    margin: 0 16px;
+}
+.main-footer__link a {
+    color: white;
+    text-decoration: none;
+}
+.main-footer a:hover,
+.main-footer a:active {
+    color:#ccc;
+}
+.button {
+    background-color: #0e4f1f;
+    color: white;
+    font:inherit;
+    border: 1.5px solid #0e4f1f;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.button:hover, .button:active {
+    background-color: white;
+    color: #0e4f1f;
+}
+
+.button:focus {
+    outline: none;
+}
