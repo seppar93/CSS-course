@@ -33,3 +33,7 @@ cant be changed with position
 elements can ramin in the documents flow or be excluded
 
 ## positioning context
+
+defines the anchor point for your position change 
+the viewport for fixed 
+ano
